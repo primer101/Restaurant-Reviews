@@ -13,8 +13,9 @@ p {
 
 body {
   background-color: #fdfdfd;
-  margin: 0;
+  margin: auto;
   position: relative;
+  max-width: 1600px;
 }
 
 ul,
@@ -31,8 +32,8 @@ a {
 
 a:hover,
 a:focus {
-  color: #3397db;
-  text-decoration: none;
+  color: black;
+  text-decoration: underline;
 }
 
 a img {
@@ -70,8 +71,8 @@ section {
 }
 
 #footer {
-  background-color: #444;
-  color: #aaa;
+  background-color: #3397DB;
+  color: white;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -83,19 +84,20 @@ section {
 
 nav {
   width: 100%;
-  height: 80px;
-  background-color: #252831;
+  /* height: 80px; */
+  background-color: #3397DB;
   text-align: center;
 }
 
 nav h1 {
   margin: auto;
+  padding: 20px 0;
 }
 
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
-  font-weight: 200;
+  font-size: 18pt;
+  font-weight: 300;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
@@ -149,8 +151,10 @@ nav h1 a {
 
 .filter-options {
   width: 100%;
-  height: 50px;
+  /* height: 50px; */
   background-color: #3397DB;
+  display: flex;
+  flex-flow: column wrap;
   align-items: center;
 }
 
@@ -159,7 +163,7 @@ nav h1 a {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  padding: 10px 0 0 20px;
 }
 
 .filter-options select {
@@ -169,8 +173,7 @@ nav h1 a {
   font-size: 11pt;
   height: 35px;
   letter-spacing: 0;
-  margin: 10px;
-  padding: 0 10px;
+  margin: 0 10px 10px 20px;
   width: 200px;
 }
 
@@ -184,6 +187,7 @@ nav h1 a {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #restaurants-list li {
@@ -344,33 +348,4 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #666;
-}
-
-@media screen and (max-width: 460px) {
-  .filter-options {
-    height: 100px;
-  }
-  #restaurants-list li h1 {
-    font-size: 12px;
-  }
-  #restaurants-list p {
-    font-size: 10pt;
-  }
-}
-
-@media screen and (max-width: 790px) {
-  #breadcrumb {
-    display: block;
-    width: 100%;
-  }
-  .inside #maincontent {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .inside #map-container {
-    position: static;
-    height: 60%;
-    display: block;
-    width: 100%;
-  }
 }

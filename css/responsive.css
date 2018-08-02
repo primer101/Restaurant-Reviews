@@ -1,0 +1,33 @@
+@media screen and (max-width: 484px) {
+    nav h1 a {
+        font-size: 16px;
+    }
+    #restaurants-list li h1 {
+        font-size: 12px;
+    }
+    #restaurants-list p {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    #breadcrumb {
+        display: block;
+        width: 100%;
+    }
+    .inside #maincontent {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .inside #map-container,
+    #restaurant-container,
+    #reviews-container {
+        width: 100%;
+    }
+    .inside #map-container {
+        position: relative;
+        height: 60%;
+        display: block;
+    }
+}
