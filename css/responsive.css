@@ -1,33 +1,66 @@
 @media screen and (max-width: 484px) {
+    #breadcrumb {
+        font-size: 14px;
+    }
+    .filter-options {
+        align-items: flex-start;
+    }
     nav h1 a {
         font-size: 16px;
     }
     #restaurants-list li h1 {
         font-size: 12px;
     }
+    #restaurants-list li a {
+        font-size: 9pt;
+    }
     #restaurants-list p {
         font-size: 10pt;
     }
+    #restaurant-name {
+        margin: 50px 0 20px;
+        font-size: 18px;
+    }
+    #restaurant-cuisine {
+        font-size: 10pt;
+    }
+    #restaurant-address {
+        font-weight: 600;
+        font-size: 12pt;
+    }
+    #reviews-list li p {
+        font-size: 0.8em;
+    }
+    #reviews-container h2 {
+        font-size: 18px;
+    }
 }
 
-@media screen and (max-width: 790px) {
-    #breadcrumb {
-        display: block;
-        width: 100%;
-    }
-    .inside #maincontent {
+@media screen and (min-width: 1200px) {
+    .inside #restaurant-container,
+    #reviews-list {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
     }
-    .inside #map-container,
+    .inside .restaurant-info {
+        width: 50%;
+    }
+    #reviews-list li {
+        width: calc(50% - 80px - 4px);
+    }
+    /* .inside #map-container,
     #restaurant-container,
     #reviews-container {
         width: 100%;
+    } */
+}
+
+@media screen and (min-width: 1600px) {
+    .inside header {
+        width: 1600px;
     }
-    .inside #map-container {
-        position: relative;
-        height: 60%;
-        display: block;
+    #breadcrumb {
+        /* removing padding */
+        width: calc(100% - 80px);
     }
 }

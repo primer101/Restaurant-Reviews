@@ -86,6 +86,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
+  // Aria Label description for accessibility
+  const mapLabel = document.getElementById('map-aria-description');
+  mapLabel.innerHTML = 'Visit ' + restaurant.name + ' restaurant at, ' + restaurant.address;
+
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
