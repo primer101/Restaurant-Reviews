@@ -1,0 +1,10 @@
+{
+  "name": "",
+  "version": "",
+  "description": "---\r #### _Three Stage Course Material Project - Restaurant Reviews_",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0"
+  }
+}

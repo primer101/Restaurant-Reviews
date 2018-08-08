@@ -27,9 +27,9 @@
       <div id="map" class="map"></div>
       <label id="map-aria-description" class="hidden-aria-description">Mapbox map application</label>
     </section>
-    <section>
+    <section aria-describedby="section-filter">
       <div class="filter-options">
-        <h2>Filter Results</h2>
+        <h2 id="section-filter">Filter Results</h2>
         <div class="filter-selects">
           <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
