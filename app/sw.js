@@ -107,3 +107,12 @@ self.addEventListener('fetch', event => {
     })
   );
 });
+
+// Listen for the "message" event, and call
+// skipWaiting if you get the appropriate message
+self.addEventListener('message', (event) => {
+  console.log('Service Worker: Skip Waiting');
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});

@@ -72,7 +72,8 @@ section {
 }
 
 #footer {
-  background-color: #3397DB;
+  /* background-color: #3397DB; */
+  background-color: red;
   color: white;
   font-size: 8pt;
   letter-spacing: 1px;
