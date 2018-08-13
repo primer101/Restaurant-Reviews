@@ -1,32 +1,41 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews Project
+The **Restaurant Reviews** is a project from Front-End Web Developer Nanodegree Program of Udacity and part of the scholarship Grow With Google. It is responsive on different sized displays and accessible for screen reader use. It adds a service worker to begin the process of creating a seamless offline experience for the users.
 
-## Project Overview: Stage 1
+![site](https://github.com/primer101/Arcade-Game/raw/master/app/img/RetaurantReviews.jpg))
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+## Features
 
-### Specification
+- A fully responsive layout.
+- A restaurant listings page.
+- A restaurant info page.
+- A filter for neighborhood and cosine.
+- A Map to show the location and to choose the restaurant.
+- Accessibility functionality.
+- Service worker implementation to allow for viewing previously browsed pages while offline.
+- A offline fist approach to serve the assets fast in low-speed/lie-fi conditions.
+- The restaurant info page works offline without previously visit it except the map.
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+## Instructions
 
-### What do I do from here?
+Several options to get up and running:
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+- Source Code (need [node.js](https://nodejs.org/en/))
+  1. Clone the repo: `git clone https://github.com/primer101/Restaurant-Reviews.git`
+  2. Install dependences `>npm install`
+  3. Run `gulp serve`
+- Live Demo in [Arcade Game](http://ldaudinot.atwebpages.com/arcade)
+- You can clone the repo and use a *Live Server/View* function of your preferred code editor.
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+## Contributing
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+This repository is part of an Udacity course project. Therefore, we most likely will not accept pull requests.
 
-## Leaflet.js and Mapbox:
+## Disclaimer
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+[leaflet.js](https://leafletjs.com/) © 2017 [Vladimir Agafonkin](http://agafonkin.com/en). Maps © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors.
 
-### Note about ES6
+"Nanodegree" is a registered trademark of Udacity. © 2011–2018 [Udacity, Inc.](https://www.udacity.com/)
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+Copyright (c) 2018 [Leonardo Daudinot](https://www.linkedin.com/in/leonardodaudinot/) and [Udacity, Inc](https://www.udacity.com/)
 
-
-
+Released under the [MIT License](LICENSE.txt) and the [Terms of Service](https://help.github.com/articles/github-terms-of-service) of GitHub.

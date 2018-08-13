@@ -1,4 +1,4 @@
-const cacheName = 'restaurant_reviews_v1';
+const cacheName = 'restaurant_reviews_v2';
 
 const assetsToCache = [
   '/',
@@ -74,21 +74,28 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   console.log('Service Worker: Fetching');
+
+  let cacheRequest = event.request;
+  if (cacheRequest.url.indexOf("restaurant.html") > -1) {
+    const cacheURL = "restaurant.html";
+    cacheRequest = new Request(cacheURL);
+  }
+
   event.respondWith(
     // Check if the request has previously been cached. If so, return the
     // response from the cache. If not, fetch the request, cache it, and then return
     // it.
-    caches.match(event.request).then(res => {
-      return (res || fetch(event.request).then(fetchResponse => {
+    caches.match(cacheRequest).then(res => {
+      return (res || fetch(cacheRequest).then(fetchResponse => {
           return caches
             // open cache
             .open(cacheName).then(cache => {
               // Filter odd requests
-              if (event.request.method === 'GET' &&
-                !event.request.url.startsWith('chrome-extension') &&
-                !event.request.url.startsWith('browser-sync')) {
+              if (cacheRequest.method === 'GET' &&
+                !cacheRequest.url.startsWith('chrome-extension') &&
+                !cacheRequest.url.startsWith('browser-sync')) {
                 // Put the response in cache
-                cache.put(event.request, fetchResponse.clone());
+                cache.put(cacheRequest, fetchResponse.clone());
               }
               // Return the cache fetched and just cached
               return fetchResponse;
@@ -96,7 +103,7 @@ self.addEventListener('fetch', event => {
         })
         // If fetch fail the request is not cached, so it handles the error
         .catch(() => {
-          if (event.request.url.indexOf('.jpg') > -1) {
+          if (cacheRequest.url.indexOf('.jpg') > -1) {
             return caches.match('/img/noimage.png');
           }
           return new Response('Sorry the Application cannot connected to the internet', {

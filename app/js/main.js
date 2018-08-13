@@ -222,6 +222,17 @@ regServiceWorker = () => {
           return;
         }
 
+        // Listen for the controlling service worker changing
+        // and reload the page
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          console.log('Refreshing the page');
+
+          window.location.reload();
+        });
+
+        // Init the toast dismiss button
+        toastDismiss();
+
         // if there's an updated worker already waiting, handle the update
         if (reg.waiting) {
           updateReady(reg.waiting);
@@ -243,16 +254,6 @@ regServiceWorker = () => {
           trackInstalling(reg.installing);
         });
 
-        // Listen for the controlling service worker changing
-        // and reload the page
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-          console.log('Refreshing the page');
-
-          window.location.reload();
-        });
-
-        // Init the toast dismiss button
-        toastDismiss();
       })
       .catch(error => {
         console.log('Service worker registration failed: ' + error);
@@ -302,17 +303,6 @@ toastDismiss = () => {
 };
 
 
-
-/* createToast = () => {
-  const toast = document.createElement('div');
-  toast.classList.add('toast');
-  toast.innerHTML =
-    '<div class="toast-content">New version available</div>' +
-    '<button id="toast-button-refresh">Refresh</button>' +
-    '<button id="toast-button-refresh">Dismiss</button>';
-  document.body.appendChild(toast);
-  return toast;
-}; */
 
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
