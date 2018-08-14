@@ -22,8 +22,9 @@ Several options to get up and running:
 
 - Source Code (need [node.js](https://nodejs.org/en/))
   1. Clone the repo: `git clone https://github.com/primer101/Restaurant-Reviews.git`
-  2. Install dependences `>npm install`
-  3. Run `gulp serve:images`
+  2. install [GraphicsMagick](http://www.graphicsmagick.org/) as a dependence of gulp-responsive-images plug-in.
+  3. Install dependences `>npm install`
+  4. Run `gulp serve:images`
 
 ## Contributing
 
