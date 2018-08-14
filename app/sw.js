@@ -1,4 +1,4 @@
-const cacheName = 'restaurant_reviews_v2';
+const cacheName = 'restaurant_reviews_v1';
 
 const assetsToCache = [
   '/',

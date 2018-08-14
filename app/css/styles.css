@@ -26,7 +26,7 @@ li {
 }
 
 a {
-  color: orange;
+  color: #f18200;
   text-decoration: none;
 }
 
@@ -231,7 +231,7 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #f18200;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
@@ -338,20 +338,63 @@ nav h1 a {
   border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 20px 30px;
+  margin: 0 40px 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  border-radius: 25px 0 25px 0;
+  /* padding: 0 20px 20px; */
   position: relative;
   /* Removing margin, padding and border */
   width: calc(100% - 80px - 4px);
 }
 
 #reviews-list li p {
-  margin: 0 0 10px;
+  padding: 0 20px;
 }
 
 #restaurant-hours td {
   color: #666;
+}
+
+.review-header {
+  background-color: #3397DB;
+  /* padding: 0.2rem 0; */
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* Safari 6.1+ */
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  /* Mozilla 18.0+ */
+  -moz-justify-content: space-between;
+  /* Safari 6.1+ */
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-header-name {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.review-header-date {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.div-review-rating {
+  /* font-size: 1.2rem; */
+  background: #f18200;
+  padding: 5px;
+  margin: 20px 15px;
+  width: 8rem;
+  /* color: white; */
+  border-radius: 5px;
+}
+
+.review-rating {
+  font-size: 1.2rem;
+  color: white;
 }
 
 .hidden-aria-description {

@@ -34,6 +34,9 @@
     #reviews-container h2 {
         font-size: 18px;
     }
+    .div-review-rating {
+        width: 6rem;
+    }
     .toast {
         bottom: 50px;
         left: 0;

@@ -1,7 +1,7 @@
 # Restaurant Reviews Project
 The **Restaurant Reviews** is a project from Front-End Web Developer Nanodegree Program of Udacity and part of the scholarship Grow With Google. It is responsive on different sized displays and accessible for screen reader use. It adds a service worker to begin the process of creating a seamless offline experience for the users.
 
-![site](https://github.com/primer101/Arcade-Game/raw/master/app/img/RetaurantReviews.jpg))
+![site](https://github.com/primer101/Restaurant-Reviews/raw/master/app/img/RetaurantReviews.jpg)
 
 ## Features
 
@@ -12,7 +12,8 @@ The **Restaurant Reviews** is a project from Front-End Web Developer Nanodegree 
 - A Map to show the location and to choose the restaurant.
 - Accessibility functionality.
 - Service worker implementation to allow for viewing previously browsed pages while offline.
-- A offline fist approach to serve the assets fast in low-speed/lie-fi conditions.
+- A offline first approach to serve the assets fast in low-speed/lie-fi conditions.
+- An update with toast  mechanism to refresh the cached assets and the page.
 - The restaurant info page works offline without previously visit it except the map.
 
 ## Instructions
