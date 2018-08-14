@@ -73,8 +73,12 @@ typings/
 # Serverless directories
 .serverless
 
+# Visual Studio code stuff
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Generated images
+img/
