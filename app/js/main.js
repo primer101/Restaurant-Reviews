@@ -163,7 +163,15 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  let imgUrlbase = DBHelper.imageUrlForRestaurant(restaurant);
+  imgUrlbase = imgUrlbase.substring(0, imgUrlbase.length - 4);
+  const imgUrl1x = `${imgUrlbase}_320.jpg`;
+  const imgUrl2x = `${imgUrlbase}_640.jpg`;
+  const imgUrl3x = `${imgUrlbase}_780.jpg`;
+  image.src = imgUrl1x;
+  image.srcset = `${imgUrl1x} 320w, ${imgUrl2x} 640w, ${imgUrl3x} 780w`;
+  image.sizes = '(max-width: 484px) 320px, (max-width: 720px) 640px, 780px';
+  image.alt = `${restaurant.name} restaurant photograph`;
   li.append(image);
 
   const name = document.createElement('h1');
@@ -195,7 +203,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
-    marker.on("click", onClick);
+    marker.on('click', onClick);
 
     function onClick() {
       window.location.href = marker.options.url;

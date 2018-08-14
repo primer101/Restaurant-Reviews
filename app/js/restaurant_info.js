@@ -88,11 +88,19 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   // Aria Label description for accessibility
   const mapLabel = document.getElementById('map-aria-description');
-  mapLabel.innerHTML = 'Visit ' + restaurant.name + ' restaurant at, ' + restaurant.address;
+  mapLabel.innerHTML = `Visit ${restaurant.name} restaurant at ${restaurant.address}`;
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  let imgUrlbase = DBHelper.imageUrlForRestaurant(restaurant);
+  imgUrlbase = imgUrlbase.substring(0, imgUrlbase.length - 4);
+  const imgUrl1x = `${imgUrlbase}_320.jpg`;
+  const imgUrl2x = `${imgUrlbase}_640.jpg`;
+  const imgUrl3x = `${imgUrlbase}_780.jpg`;
+  image.src = imgUrl1x;
+  image.srcset = `${imgUrl1x} 320w, ${imgUrl2x} 640w, ${imgUrl3x} 780w`;
+  image.sizes = '(max-width: 484px) 320px, (max-width: 720px) 640px, 780px';
+  image.alt = `${restaurant.name} restaurant photograph`;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;

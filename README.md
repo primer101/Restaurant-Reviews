@@ -1,7 +1,7 @@
 # Restaurant Reviews Project
 The **Restaurant Reviews** is a project from Front-End Web Developer Nanodegree Program of Udacity and part of the scholarship Grow With Google. It is responsive on different sized displays and accessible for screen reader use. It adds a service worker to begin the process of creating a seamless offline experience for the users.
 
-![site](https://github.com/primer101/Restaurant-Reviews/raw/master/app/img/RetaurantReviews.jpg)
+![site](https://github.com/primer101/Restaurant-Reviews/raw/master/app/images/fixed/RetaurantReviews.jpg)
 
 ## Features
 
@@ -23,9 +23,7 @@ Several options to get up and running:
 - Source Code (need [node.js](https://nodejs.org/en/))
   1. Clone the repo: `git clone https://github.com/primer101/Restaurant-Reviews.git`
   2. Install dependences `>npm install`
-  3. Run `gulp serve`
-- Live Demo in [Arcade Game](http://ldaudinot.atwebpages.com/arcade)
-- You can clone the repo and use a *Live Server/View* function of your preferred code editor.
+  3. Run `gulp serve:images`
 
 ## Contributing
 

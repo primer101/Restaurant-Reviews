@@ -1,26 +1,46 @@
-const cacheName = 'restaurant_reviews_v1';
+const cacheName = 'restaurant_reviews_v2';
 
 const assetsToCache = [
   '/',
-  './index.html',
-  './restaurant.html',
+  'index.html',
+  'restaurant.html',
   '/data/restaurants.json',
-  '/img/1.jpg',
-  '/img/2.jpg',
-  '/img/3.jpg',
-  '/img/4.jpg',
-  '/img/5.jpg',
-  '/img/6.jpg',
-  '/img/7.jpg',
-  '/img/8.jpg',
-  '/img/9.jpg',
-  '/img/10.jpg',
+  '/img/1_320.jpg',
+  '/img/2_320.jpg',
+  '/img/3_320.jpg',
+  '/img/4_320.jpg',
+  '/img/5_320.jpg',
+  '/img/6_320.jpg',
+  '/img/7_320.jpg',
+  '/img/8_320.jpg',
+  '/img/9_320.jpg',
+  '/img/1_640.jpg',
+  '/img/2_640.jpg',
+  '/img/3_640.jpg',
+  '/img/4_640.jpg',
+  '/img/5_640.jpg',
+  '/img/6_640.jpg',
+  '/img/7_640.jpg',
+  '/img/8_640.jpg',
+  '/img/9_640.jpg',
+  '/img/1_780.jpg',
+  '/img/2_780.jpg',
+  '/img/3_780.jpg',
+  '/img/4_780.jpg',
+  '/img/5_780.jpg',
+  '/img/6_780.jpg',
+  '/img/7_780.jpg',
+  '/img/8_780.jpg',
+  '/img/9_780.jpg',
+  '/img/10_320.jpg',
+  '/img/10_640.jpg',
+  '/img/10_780.jpg',
   '/img/noimage.png',
   '/css/styles.css',
   '/css/responsive.css',
   '/js/dbhelper.js',
   '/js/main.js',
-  '/js/restaurant_info.js',
+  '/js/restaurant_info.js'
   // '/css/styles.min.css',
   // '/css/responsive.min.css',
   // '/js/dbhelper.min.js',
@@ -77,7 +97,7 @@ self.addEventListener('fetch', event => {
 
   let cacheRequest = event.request;
   if (cacheRequest.url.indexOf("restaurant.html") > -1) {
-    const cacheURL = "restaurant.html";
+    const cacheURL = 'restaurant.html';
     cacheRequest = new Request(cacheURL);
   }
 
