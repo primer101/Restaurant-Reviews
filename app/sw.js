@@ -1,4 +1,4 @@
-const cacheName = 'restaurant_reviews_v2';
+const cacheName = 'restaurant_reviews_v1';
 
 const assetsToCache = [
   '/',
@@ -38,6 +38,7 @@ const assetsToCache = [
   '/img/noimage.png',
   '/css/styles.css',
   '/css/responsive.css',
+  '/js/register.js',
   '/js/dbhelper.js',
   '/js/main.js',
   '/js/restaurant_info.js'
